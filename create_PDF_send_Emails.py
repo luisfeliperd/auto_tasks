@@ -4,7 +4,7 @@
 #Source Write PDF - https://stackoverflow.com/questions/1180115/add-text-to-existing-pdf-using-python Author - David Dehghan
 
 from PyPDF2 import PdfFileWriter, PdfFileReader
-from pw_fradd import pw_fradd
+from pw_fradd import fradd, pw_fradd
 import io
 import unidecode
 import time
@@ -64,12 +64,12 @@ def write_pdf(s_path, d_path, name):
 # ## Send Emails
 
 info_dict = {
-    "fromaddr":"",
+    "fromaddr":fradd,
     "toaddr":"",
     "subject":"Email de Teste - Emissão de Certificados",
     "body":"",
-    "filename":"certificado.pdf",
-    "attachment":"certificado.pdf",
+    "filename":"",
+    "attachment":"",
 }
 
 
